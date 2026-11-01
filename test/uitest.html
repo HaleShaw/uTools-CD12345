@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>成都12345 · UI 自测</title>
+<link rel="stylesheet" href="../app/style.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <main class="view" id="view"></main>
+  </div>
+  <script>
+  /* ------------------------------------------------------------------
+   * 桩：模拟 preload 暴露的 window.services
+   *
+   * ⚠️ 这里的工单数据全部是**合成数据**（流水号 1120210006123xx / 提取码 4829xx，
+   * 姓名与住址均为「李某 / 某小区」之类的占位），不含任何真实的工单或个人隐私。
+   * 本页同时是 docs/screenshots/*.png 的截图源，请勿在此填入真实凭据。
+   * ------------------------------------------------------------------ */
+  (function () {
+    var now = Date.now();
+    function T(o){ return o; }
+    var tickets = [
+      T({id:"t3", serial:"312021000612347", passcode:"482915", kind:"msg", remark:"",
+         createdAt: now-3600e3, fillTime:"2026-11-01 09:12", callTime:"", queryState:"never", lastError:"", result:null}),
+      T({id:"t4", serial:"212021000612348", passcode:"482916", kind:"mail", remark:"社区充电桩",
+         createdAt: now-86400e3, fillTime:"2026-10-30 21:50", callTime:"2026-10-30 21:44", queryState:"error",
+         lastError:"流水号或提取码不正确，请核对后重试", result:null}),
+      T({id:"t2", serial:"112021000612346", passcode:"482914", kind:"tel", remark:"",
+         createdAt: now-4*86400e3, fillTime:"2026-10-28 09:30", callTime:"2026-10-28 09:02", queryState:"ok", lastError:"",
+         summary:{title:"[咨询]社保转移流程", dept:"锦江区", receiveTime:"2026-10-28 09:02", appealContent:"本人将于 11 月从锦江区调至高新区，社保关系如何转移？"},
+         result:{queriedAt: now-4*86400e3+600e3, statusText:"办理中",
+           summary:{title:"[咨询]社保转移流程", dept:"锦江区", receiveTime:"2026-10-28 09:02", appealContent:"本人将于 11 月从锦江区调至高新区，社保关系如何转移？"},
+           timeline:[{dept:"锦江区人力资源和社会保障局", time:"2026-10-28 09:35", text:"您好，经查，社保关系转移需通过线上平台申请，办理时限为 15 个工作日。"}],
+           finalResult:"锦江区(2026-10-28 09:35)：您好，经查……"}}),
+      T({id:"t1", serial:"112021000612345", passcode:"482913", kind:"tel", remark:"某小区违建",
+         createdAt: now-2*86400e3, fillTime:"2026-10-31 12:10", callTime:"2026-10-31 12:05", queryState:"ok", lastError:"",
+         summary:{title:"李某[投诉举报]违法建设", dept:"武侯区综合执法局", receiveTime:"2026-10-31 12:05",
+                  serial:"112021000612345", category:"投诉举报",
+                  appealContent:"【事发时间】：近期\n【涉事地址】：武侯区某路某小区\n【被诉对象】：相关业主\n【问题描述】：上述业主在楼道公共区域违建，现进行投诉。\n【来电诉求】：要求拆除违建。（小区治理）"},
+         result:{queriedAt: now-3600e3, statusText:"正在办理中",
+           summary:{title:"李某[投诉举报]违法建设", dept:"武侯区综合执法局", receiveTime:"2026-10-31 12:05",
+                    serial:"112021000612345", category:"投诉举报",
+                    appealContent:"【事发时间】：近期\n【涉事地址】：武侯区某路某小区\n【被诉对象】：相关业主\n【问题描述】：上述业主在楼道公共区域违建，现进行投诉。\n【来电诉求】：要求拆除违建。（小区治理）"},
+           timeline:[
+             {dept:"武侯区", time:"2026-10-31 12:05", text:"拟派工单"},
+             {dept:"武侯区", time:"2026-10-31 12:09", text:"签收工单。"},
+             {dept:"武侯区", time:"2026-10-31 12:15", text:"签收工单：转派下级部门"},
+             {dept:"武侯区综合执法局", time:"2026-10-31 12:15", text:"转办工单"},
+             {dept:"武侯区综合执法局", time:"2026-10-31 12:18", text:"签收工单。"}],
+           finalResult:""}}),
+      T({id:"t5", serial:"112021000612349", passcode:"482917", kind:"tel", remark:"小区燃气",
+         createdAt: now-40*86400e3, fillTime:"2026-10-01 10:00", callTime:"2026-10-01 09:12", queryState:"ok", lastError:"",
+         summary:{title:"[投诉举报]小区治理", dept:"彭州市", receiveTime:"2026-10-01 09:12", serial:"112021000612349",
+                  category:"投诉举报",
+                  appealContent:"【事发时间】：2026年10月1日\n【涉事地址】：彭州市S106某小区\n【问题描述】：小区楼道堆放易燃物。"},
+         result:{queriedAt: now-30*86400e3, statusText:"已办结",
+           summary:{title:"[投诉举报]小区治理", dept:"彭州市", receiveTime:"2026-10-01 09:12", serial:"112021000612349",
+                    category:"投诉举报",
+                    appealContent:"【事发时间】：2026年10月1日\n【涉事地址】：彭州市S106某小区\n【问题描述】：小区楼道堆放易燃物。"},
+           timeline:[
+             {dept:"彭州市", time:"2026-10-01 09:12", text:"来电已受理登记，工单已转彭州市城市管理局办理。"},
+             {dept:"彭州市", time:"2026-10-03 17:25", text:"您好！您所反映的问题，彭州市高度重视，立即安排工作人员进行调查处理，现将有关情况回复如下：某社区接访后于当日前往某小区16栋后侧简易棚核实，该棚中确系有一楼住户张某存放的若干氧气罐。经核实1楼居民张某从事气体经营，将空置气罐临时存放在该处，社区工作人员现场对该经营者进行了安全教育，并责令其立即将气罐转移至安全的存放处。该户已于当日使用危化品专用运输车辆将空置气罐转移至其厂房处存放。以上情况工作人员于2026年10月3日16：25时与反映人联系，反映人表示满意。"},
+             {dept:"彭州市智慧蓉城运行中心", time:"2026-10-03 16:25", text:"与反映人联系，反馈现场已清理完毕，反映人表示满意。本工单办结。"}],
+           finalResult:"经核查，来电所述情况属实。已联合消防、属地街道对小区东门消防通道进行集中清理。"}})
+    ];
+
+    window.services = {
+      onPluginEnter: function(){},
+      listTickets: function(){ return tickets.slice(); },
+      addTicket: function(input){
+        var s=String(input.serial||"").trim(), p=String(input.passcode||"").trim();
+        if(!/^\d{12}$/.test(s)) return {ok:false, error:"流水号应为 12 位数字"};
+        if(!/^\d{6}$/.test(p)) return {ok:false, error:"提取码应为 6 位数字"};
+        var t={id:"new"+Date.now(),serial:s,passcode:p,kind:s[0]==="2"?"mail":(s[0]==="3"?"msg":"tel"),
+          remark:input.remark||"",createdAt:Date.now(),fillTime:"2026-11-01 12:00",callTime:"",
+          queryState:"never",lastError:"",result:null};
+        tickets.push(t); return {ok:true,tickets:tickets.slice()};
+      },
+      updateTicket: function(){ return {ok:true,tickets:tickets.slice()}; },
+      removeTicket: function(id){ tickets=tickets.filter(function(t){return t.id!==id;}); return {ok:true,tickets:tickets.slice()}; },
+      clearAll: function(){ tickets=[]; return {ok:true,tickets:[]}; },
+      queryTicket: function(id, opts){
+        return new Promise(function(resolve){
+          setTimeout(function(){
+            var t=null;
+            for(var i=0;i<tickets.length;i++){ if(tickets[i].id===id) t=tickets[i]; }
+            if(opts && opts.randCode){ resolve({ok:true,tickets:tickets.slice(),ticket:t}); return; }
+            if(t && t.result){ resolve({ok:true,tickets:tickets.slice(),ticket:t}); return; }
+            resolve({ok:false, error:"流水号或提取码不正确，请核对后重试", needCaptcha:true, tickets:tickets.slice()});
+          }, 300);
+        });
+      },
+      getCaptcha: function(){ return Promise.resolve({ok:true,imageBase64:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAZAFADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2yiiuCOrR3B1Gee3nj1GbUrIR2TSbphCrQsmVzhASzHnADPgnNKnTcyKlRQ3O9oqhpzXpeYahPbG44YW1ucrEhLbSSfmYnBycAfLwBgk8L4r1q5Txxb29vNcBYYXgaK1WRpJlPkyyIuIchynTbJxhWLJyG1oYaVabhHormkfePSaK4rwDLdXMU0jahdTwJGouIZ4kj8u+dme4XGxW+UsuO3zkc446W+Y+Yss6MLeCRSiDBM8h4UY6ABmGM/xAHgLk516TozcG72FN8poUVRtYfs1xJ9nPm2s8ru2Hz5UmTuxk/dJB4HIYnqD8tDxMbcwWa3DoEE5cqXiBICMMgS/KeWX8655z5I8wQfNubtFcdplzp1vqsIs2VbiUeWDI1qE2l03D9ycliBhRzyfTNdjSpVfaK5TVgrOuNHhuIrtBPPE1zcR3JdCuUdPL27cgjH7teoPetGitk2tUS4p6Mp2Wni0llnkuZ7q4lVUaWbaDtXJVcIqjALMemeevTGdqHhPT7/WP7WP7m9EYVZY4IWKsGUiTLoxLgIFBOcDOACc1u0VUas4vmi9QiuXYoWWkWmnTF7MPCrriWMNlZW4/eNnJL9ctnLZ+bdhcOu9P+13MUzXVxGIwQI4yoU56nOMg44yCCATjGTV2ipk3J3lqEoqSsypa6fDZyvJC837zmRXlaQMeAD8xJyAMcHp1zgYnmhjuImilXch98EHqCCOQQeQRyDUlFTZWsEYqKsipHYLHerc+fM+yIxJG5BCg7c843EnaOST3q3RRSSS2Gf/Z",numcode:"1"}); },
+      verifyCaptcha: function(){ return Promise.resolve({ok:true}); },
+      openInBrowser: function(){},
+      copyText: function(t){ try{ navigator.clipboard.writeText(t); }catch(e){} return true; },
+    };
+  })();
+  </script>
+  <script src="../app/app.js"></script>
+</body>
+</html>

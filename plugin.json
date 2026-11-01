@@ -1,0 +1,22 @@
+{
+  "pluginName": "成都12345",
+  "version": "1.0.0",
+  "description": "成都 12345 热线工单本地查询：查看流水号 / 提取码列表与办理进度，结果本地缓存",
+  "author": "HaleShaw",
+  "homepage": "https://github.com/HaleShaw/uTools-CD12345",
+  "main": "index.html",
+  "logo": "logo.png",
+  "preload": "preload.js",
+  "pluginSetting": {
+    "single": true,
+    "height": 560
+  },
+  "features": [
+    {
+      "code": "cd12345",
+      "description": "成都 12345 热线工单本地查询：查看流水号 / 提取码列表与办理进度，结果本地缓存",
+      "icon": "logo.png",
+      "cmds": ["成都12345", "成都12345热线", "cd12345"]
+    }
+  ]
+}

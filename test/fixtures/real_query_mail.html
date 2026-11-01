@@ -1,0 +1,757 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/tr/html4/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>成都12345热线</title>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<link href="Site/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<script type="text/javascript" src="Site/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="Site/js/Check.js"></script>
+<script type="text/javascript" src="Site/js/PS.js"></script>
+<script type="text/javascript" src="Site/js/popmsg.js"></script>
+<link rel="stylesheet" type="text/css" href="Site/css/lxxq.css"/>
+<link rel="stylesheet" type="text/css" href="Site/css/reset.css"/>
+<style>
+.k32 {
+    width: 100%;
+}
+.k32 .title {
+    background: #E8EFF4;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    border: 1px solid #dadada;
+}
+.k32 .title .titleW {
+    margin-top: 14px;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.k32 .content {
+    border: 1px solid #dadada;
+    border-top: 0;
+    width: 560px;
+    padding: 22px 50px;
+}
+</style>
+<script type="text/javascript">
+function textdown(e) {
+    textevent = e;
+    if (textevent.keyCode == 8) {
+        return;
+    }
+    if (document.getElementById('textarea').value.length >= 300) {
+        alert("不满意说明在300字以内");
+        if (!document.all) {
+            textevent.preventDefault();
+        } else {
+            textevent.returnValue = false;
+        }
+    }
+}
+
+
+function queryPS(){
+	var wsCode = $("#wsCode").val();
+	var edtUrl = "http://125.70.9.159:8000/tickets/12345/result?id="+wsCode;
+	$('#ifmEdit').attr('src',edtUrl);
+}
+</script>
+<style  type="text/css">
+table, td {
+	border: 1px solid  #CCC;
+	border-collapse: collapse;
+}
+.td21{
+TEXT-ALIGN: center;
+}
+.fontCenter{
+	text-align: center;
+	vertical-align: middle;
+}
+.fontRight{
+	text-align: right;
+	vertical-align: middle;
+}
+#ctable input{
+	vertical-align:middle; 
+	margin-top:-2px; 
+	margin-bottom:1px;
+}
+</style>
+</head>
+<body>
+		
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!-- css -->
+  </head>
+  
+  <body>
+    <div class="topBar">
+		<div class="inner clearfix">
+		<div class="lg_tbar_l">
+		<span></span>
+		<span class="time" id="time"></span>
+<script type="text/javascript">
+	function showLocale(objD){
+		var str;
+		var yy = objD.getYear();
+		if(yy<1900) yy = yy+1900;
+		var MM = objD.getMonth()+1;
+		if(MM<10) MM = MM;
+		var dd = objD.getDate();
+		if(dd<10) dd = '0' + dd;
+		var hh = objD.getHours();
+		if(hh<10) hh = '0' + hh;
+		var mm = objD.getMinutes();
+		if(mm<10) mm = '0' + mm;
+		var ss = objD.getSeconds();
+		if(ss<10) ss = '0' + ss;
+		var ww = objD.getDay();
+		if  (ww==0)  ww="星期日";
+		if  (ww==1)  ww="星期一";
+		if  (ww==2)  ww="星期二";
+		if  (ww==3)  ww="星期三";
+		if  (ww==4)  ww="星期四";
+		if  (ww==5)  ww="星期五";
+		if  (ww==6)  ww="星期六";
+		colorfoot="</font>"
+		str = yy + "年 "+ MM + "月" + dd + "日 " +ww
+		return(str);
+	}
+	function tick(){
+		var today;
+		today = new Date();
+		document.getElementById("time").innerHTML = showLocale(today);
+		window.setTimeout("tick()", 1000);
+	}
+	tick();
+
+</script>
+<script defer async type="text/javascript"  src=" //gov.govwza.cn/dist/aria.js?appid=93cf112aafa072481e9d79316f6cd54b"  charset="utf-8"></script>
+
+		</div>
+			<div class="lg_tbar_r">
+				<a href="http://www.chengdu.gov.cn" rel="nofollow">返回成都市人民政府门户网站</a>
+			</div>
+			<!-- <div class="lg_tbar_r" style="  width: 100px;">
+				<a href="http://www.chengdu.gov.cn/usercenter" rel="nofollow">个人中心</a>
+			</div> -->
+			<div class="lg_tbar_r" style="  width: 100px;">
+				<a href="querymyAppeal" rel="nofollow">个人中心</a>
+			</div>
+			<div class="lg_tbar_r" style="  width: 100px;">
+				<a href="javascript:;" onclick="aria.start()">网站无障碍</a> 
+			</div>
+			<div class="lg_tbar_r" style="  width: 100px;">
+				<a href="javascript:;" onclick="aria.oldFixedStart()">适老版</a>
+			</div>
+	
+		</div>
+	</div>	
+
+  </body>
+</html>
+
+	<!-- 网页主体 -->
+	<div class="contentBox"  style="margin-top: -5px;">
+		<div class="mainBox">
+			<!--header-->
+			
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">  --> 
+
+<meta name="renderer" content="webkit">
+<!-- css -->
+
+<script type="text/javascript" src="/Site/js/Check.js"></script>
+<script type="text/javascript" src="/Site/js/focusImg.js"></script>
+<script type="text/javascript" src="/Site/js/jquery-1.8.3.min.js"></script>
+ <style type="text/css">
+.logo_logo{
+	/* width:33.664%; background:url(../images/public/logo_shadow.png) no-repeat center;background-size: 100%; float: left;text-align: center;padding-left:17px;padding-top:6px;
+	 -webkit-animation:change 6s linear infinite;*/
+	
+}
+@-webkit-keyframes change {0%{-webkit-transform:rotate(0deg);} 50%{-webkit-transform:rotate(-180deg);} 100%{-webkit-transform:rotate(-360deg);} }
+
+</style> 
+<script type="text/javascript">
+function szjy()
+{
+	window.open("Opinion?id=1","","","");
+}
+</script>
+
+</head>
+<body>
+		<!-- logo -->
+		<div class="logoBox">
+			<!--<marquee direction="left" loop="-1" scrollamount="5"scrolldelay="10"  onmouseover=this.stop() onmouseout=this.start() style="height:30px;position: absolute;" >
+				<div style="font-family:'標楷體' !important;font-size:25px;font-style:normal;color: red;">
+						<b>成都市人民政府网络理政平台全体工作人员祝全市人民2017新春快乐!</b>
+				</div>
+			</marquee> -->
+			
+					<!-- <img class="logo_logo" src="/Site/img/logo_logo.png" style="margin-left: -40px;margin-top: 48px;position: absolute;"/>
+					<img src="/Site/img/logo_text.png" style="position:absolute;margin-left: 33px;margin-top: 60px; width: 15%;height: 35%"> -->
+
+					<img class="logo_logo" src="/Site/images/logo.png" style="margin-left: -150px;margin-top: 58px;position: absolute;"/> 
+
+					<img src="/Site/img/logo.png" class="logo" style="float: right;margin-left: 140px;"/>
+				
+			</table>
+			<!--<img src="/Site/img/logoW.png" class="logoW"/>-->
+		</div>
+		<!-- 导航 -->
+		<div class="nav">
+			<ul>
+				
+	   				
+	   				
+						<li class="navList" ><a href="index" >首页</a></li>
+	   				
+		   				             
+				
+	   				
+	   				
+						<li class="navList" ><a href="szxx">市政府信箱</a></li>
+	   				
+		   			
+		   		<!-- 
+	   				
+	   				
+						<li class="navList" ><a href="javaScript:void(0)" onclick="szjy()">我向市长提建议</a></li>
+	   				
+		   		 -->	
+		   		
+	   				
+	   				
+						<li class="navList" ><a href="qsxxx" >区(市)县政府信箱</a></li>
+	   				
+		   				               
+				
+	   				
+	   				
+						<li class="navList"  ><a href="bmxx" >市政府部门信箱</a></li>
+	   				
+		   				             
+				
+		   		
+	   				
+	   				
+						<li class="navList"><a href="gkdhReply">12345热线电话</a></li>
+	   				
+		   			
+		   		
+	   				
+	   				
+	   				
+						<li class="navList" ><a href="firmWrite?id=1" >服务企业信箱</a></li>
+	   				
+		   				  	                   
+				    
+		   			         
+				         
+			</ul>
+		</div>
+		<input type="hidden" value="telMailopen">
+
+</body>
+<script type="text/javascript">
+	$(function(){
+		bannerSize();
+	});
+	$(window).resize(function(){
+		bannerSize();
+	});
+	function bannerSize(){
+		var thisW = document.documentElement.clientWidth;
+		var endH = thisW*(143 /1200);
+		$(".logoBox").css("height",endH-7+"px");
+		console.log(endH);
+	}
+	function tabs(obj){
+		$(obj).addClass("active").siblings().removeClass("active");
+	}
+</script>
+</html>
+			<!--header_end-->
+			<div id="container" >
+					
+					<div class="location"><b>当前位置：</b> &nbsp;  &nbsp;首页  &nbsp;- &nbsp; 市长信箱 &nbsp;-  &nbsp;公众来信</div>
+					<div ></div>
+					<div id="container1">
+						<!-- 左侧 -->
+							<div class=leftside>
+								<div style="PADDING-BOTTOM: 10px; PADDING-LEFT: 11px; PADDING-RIGHT: 11px; PADDING-TOP: 20px ; margin-left: 5px;" class=left6 >
+									<div class="f14pxblue fontB">来信分类：</div>
+									<div class=blank10px></div>
+									<div class="listL f12px">
+									<P style="LINE-HEIGHT: 200%"></P>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1101"><NOBR>城市管理</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1104"><NOBR>交通管理</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1107"><NOBR>环境保护</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1110"><NOBR>公安政法</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1113"><NOBR>劳动保障</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1116"><NOBR>民政</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1119"><NOBR>市场监督</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1122"><NOBR>城乡住房</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1125"><NOBR>教科文体广新</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1128"><NOBR>国土与拆迁安置</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1131"><NOBR>卫生</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1134"><NOBR>企业管理</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1137"><NOBR>农林牧副渔</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1140"><NOBR>水务</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1143"><NOBR>城市园林</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1146"><NOBR>城市规划与建设</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1149"><NOBR>金融</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1152"><NOBR>旅游</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1155"><NOBR>税收</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1158"><NOBR>邮政与快递</NOBR></A></div>
+									<div style="FLOAT: left; HEIGHT: 28px; MARGIN-RIGHT: 8px">
+										<A href="moreMailByClass?MailType=1161"><NOBR>移动通信</NOBR></A></div>
+									</div>
+								</div>
+							</div>
+							<!-- 左侧 -->
+							
+							<!-- right1-->
+							<div class=rightside1>
+							<TABLE class="tb" width=710px  >
+								<TBODY>
+									
+									<tr style="border: 1px solid #ccc;">
+										<td class ="td21" colSpan=4 ><FONT class="f14pxblue fontB">来信情况</FONT></td>
+									</tr>
+									<tr >
+										<td class="td1"  style="border: 1px solid #ccc;">来信标题</td>
+										<td class="td2 f12pxgrey" colSpan=3 style="border: 1px solid #ccc;">武侯区某路某小区大门口路面公共停车位取消事宜</td>
+									</tr>
+									<tr>
+										<td class="td1" style="border: 1px solid #ccc;">来 信人</td>
+										<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">李某</td>
+										<td class="td1" style="border: 1px solid #ccc;">来信时间</td>
+										<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-15 21:28</td>
+									</tr>
+									<tr>
+										<td class="td1" style="border: 1px solid #ccc;">来信内容</td>
+										<td class="td2 f12pxgrey" colSpan=3 style="border: 1px solid #ccc;">小区主大门前的市政道路（某路）上划有公共停车位，其中部分停车位正好正对着小区大门出入口，带来以下问题：
+1.停车位上的车辆遮挡视线，进出小区的车辆与过往车辆、行人容易发生碰撞，存在严重交通安全隐患。
+2.早晚高峰时段，进出车辆需反复避让，造成大门处拥堵。
+3.影响消防车、救护车等紧急车辆顺畅进出，可能延误救援。
+4.影响小区大门整体美观和整洁形象。
+恳请协调相关部门现场核实，取消小区大门正对方向的那几个公共停车位，或在门口区域设置黄色网格线/禁停区，确保通行安全顺畅。</td>
+									</tr>
+									
+									<tr>
+										
+											
+												<!-- <div style="color: gray;font-size: 15px;margin-top: 20px;margin-left: 20px;">暂无批示结果! </div> -->
+											
+											
+												
+									</tr>
+									<tr>
+										
+											
+												<!-- <td class="td1"  style="border: 1px solid #ccc;">批示详情</td>
+												<td class="td2 f12pxgrey" colSpan=3 style="border: 1px solid #ccc;"><div style="color: gray;font-size: 15px;margin-top: 20px;margin-left: 20px;">暂无批示结果! </div></td> -->
+											
+											
+												
+									</tr>
+									 
+									<tr style="border: 1px solid #ccc;">
+										<td colSpan=4 class ="td21" ><FONT class="f14pxblue fontB">办理情况</FONT></td>
+									</tr>
+									
+										
+										
+										<tr>
+											<td class="td1" rowspan=10 style="border: 1px solid #ccc;">处理部门</td>
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">市城市运行和政务服务办拟派工单（主办：武侯区）</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-15 21:56</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">武侯区签收工单</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-16 10:38</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">武侯区转办工单（武侯区住建交局）</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-16 10:38</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">武侯区住建交局批量签收工单</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-16 10:58</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">市城市运行和政务服务办转办工单（市公安交管局）</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-16 14:12</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">市交管局签收工单。</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-16 16:16</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">市交管局提交办理结果</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-17 16:34</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">市城市运行和政务服务办拟派工单（主办：市公安交管局）</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-18 10:18</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">市交管局签收工单。</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-20 09:47</td>
+										</tr>
+										
+										<tr>
+											
+											<td class="td31 f12pxgrey" style="border: 1px solid #ccc;">市交管局提交办理结果</td>
+											<td class="td1" style="border: 1px solid #ccc;">处理时间</td>
+											<td class="td32 f12pxgrey" style="border: 1px solid #ccc;">2026-04-23 10:36</td>
+										</tr>
+										
+										
+									 
+									<tr style="border: 1px solid #ccc;">
+										<td colSpan=4 class ="td21"><FONT class="f14pxblue fontB">办理结果</FONT></td>
+									</tr>
+									
+			
+									<tr style="border: 1px solid #ccc;">
+										<td class="td44 f12pxgrey" colSpan=4>市公安交管局(2026-04-23 16:17:24)：
+反映人：
+    您好！谢谢您的来电，您所反映的问题，成都市公安局交通管理局高度重视，立即责成交警一分局进行调查处理，现将有关情况答复如下：
+    您反映的武侯区某路某小区小区门口规划了停车位，停车位正对小区大门存在安全隐患，建议取消部分停车位的问题。
+     因某路周边停车需求大，为解决周边群众停车难的问题，故在某路设置了路边临时占道停车位，供周边群众停车使用，经现场勘查，该路段设置的路边临时占道停车位符合设置标准。
+    以上情况于2026年4月22日16时16分与您联系，您已知晓。
+              成都市公安局交通管理局         
+                  2026年4月22日
+
+
+
+市公安交管局(2026-04-17 16:53:00)：
+反映人：
+     您好！谢谢您的来电，您所反映的问题，成都市公安局交通管理局高度重视，立即责成交警一分局进行调查处理，现将有关情况答复如下：
+     您反映的武侯区某路某小区小区门口规划了停车位，停车位正对小区大门存在安全隐患，建议取消部分停车位的问题。分局已安排警力到现场勘查，如存在设置不合理的情况，分局将通知相关单位进行整改。
+      以上情况于2026年4月17日15时37分与您联系，您已知晓。
+              成都市公安局交通管理局     
+                   2026年4月17日
+
+
+</td>
+									</tr>
+									
+									
+							</TBODY>
+						</TABLE>
+						
+						<div class=nav50></div>
+						
+						<div style="WIDTH: 690px" class=blank10px></div>
+						<div style="WIDTH: 710px;" class="rightside1" >
+							<form style="MARGIN: 0px" method=post name=mailForm action=mailComment onsubmit="return false;">
+								<table class="tb" border="0" cellSpacing="" cellPadding="" width=710px >
+									<tbody>	
+										<tr style="border: 1px solid #ccc;">
+											<td class="f14pxblue fontB fontCenter" colspan="4">对办理情况的评价</td>
+										</tr>
+										<tr style="display: none">
+											<td class="fontRight" style="border: 1px solid #ccc;">您的来信流水号：</td>
+											<td style="border: 1px solid #ccc;">
+												<INPUT maxLength=12 size=28 type=text name=NO style="width: 150px" value="212021000612348">
+											</td>
+											<td class="fontRight" style="border: 1px solid #ccc;">您的来信提取码：</td>
+											<td style="border: 1px solid #ccc;">
+												<INPUT maxLength=6 size=28 type=text name=PWD style="width: 150px" value="482916">
+											</td>
+										</tr>
+										<tr>
+											<td class="fontRight" colspan="1" style="border: 1px solid #ccc;">承办单位是否与您联系：</td>
+											<td colspan="1" style="border: 1px solid #ccc;">
+												<label><INPUT value="1" type="radio" name="DeptCnt" checked="checked" >是</label>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												<label><INPUT value="0" type="radio" name="DeptCnt">否</label>
+											</td>
+											<td class="fontRight" colspan="1" style="border: 1px solid #ccc;">对承办单位的服务态度是否满意：</td>
+											<td colspan="1" style="border: 1px solid #ccc;">
+												<label><INPUT value="5" type="radio" name="DeptPos" checked="checked">满意</label>
+												
+												<label><INPUT value="4" type="radio" name="DeptPos"  >基本满意</label>
+												
+												<label><INPUT value="1" type="radio" name="DeptPos">不满意</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="fontRight" colspan="1" style="border: 1px solid #ccc;">您的诉求是否得到解决：</td>
+											<td colspan="1" style="border: 1px solid #ccc;">
+												<label><INPUT value="21" type="radio" name="SolveC" checked="checked" >解决</label>
+												
+												<label><INPUT value="11" type="radio" name="SolveC">部分解决</label>
+												
+												<label><INPUT value="10" type="radio" name="SolveC">未解决</label>
+											</td>
+											<INPUT  type="hidden" name="PingJia" >
+											<!-- <td class="fontRight" colspan="1" style="border: 1px solid #ccc;">您对诉求的办理结果是否满意：</td>
+											<td colspan="1" style="border: 1px solid #ccc;">
+												<label><INPUT value=5 type=radio name=PingJia checked="checked">满意</label>
+												
+											    <label><INPUT value=4  type=radio name=PingJia>基本满意 </label>
+											    
+											    <label><INPUT value=1 type=radio name=PingJia>不满意<BR></label>
+											</td> -->
+										</tr>
+										<tr>
+											<td style="vertical-align: top; text-align: right;border:1px solid #ccc;">服务态度、办理结果<br/>不满意的原因：<br></td>
+											<td colspan="3" style="vertical-align: top;text-align: left;border:1px solid #ccc;">
+												<textarea id="textarea" rows="4" cols="65" id="Content" name=BMYSM style="color:#858585;" 
+													onfocus="if(this.value=='不满意原因限300字') {this.value='';}this.style.color='black';" 
+													onblur="if(this.value=='') {this.value='不满意原因限300字';this.style.color='#858585';}" 
+													onKeyDown="textdown(event)" maxlength="300">不满意原因限300字</textarea>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="4" style="margin-left:50px;border:1px solid #ccc;" class="fontCenter">
+												<input type="image" id="submitIpt" src="Site/img/seekBg-3.png" onclick="if(typeof confirmForm === 'function') return confirmForm(); else { return false; }"/>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</form>
+						</div>
+						
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<input type="hidden" id="visitDay" value="129" />
+<!--footer  -->
+<div style="float: left;width:100%;margin-top: 0.5px;">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>中共成都市委书记信箱</title>
+
+</head>
+<body>
+	<div class="footer"  >
+		<div class="footerNav">
+			<!-- <a href="http://www.chengdu.gov.cn/indexbottom/aboutus.shtml">关于我们</a>&nbsp; | &nbsp; -->
+			<a href="https://www.chengdu.gov.cn/cdsrmzf/c169110/detail_one.shtml">关于我们</a>&nbsp; | &nbsp;
+			<a href="https://www.chengdu.gov.cn/cdsrmzf/c169111/detail_one.shtml">法律声明</a> &nbsp;| &nbsp;
+			<!-- <a href="http://www.chengdu.gov.cn/portals/information/findFlsm.do?columnId=0002012903">法律声明</a> &nbsp;| &nbsp; -->
+			<!-- <a href="http://www.chengdu.gov.cn/column/00/02/01/26/11content.shtml">网站动态</a>&nbsp; | &nbsp; -->
+			<!--<a href="https://www.chengdu.gov.cn/chengdu/public/wzdtlist.shtml">网站建设</a>&nbsp; | &nbsp;
+			<a href="http://www.chengdu.gov.cn/chengdu/home/2021-08/02/content_f42aa84ac8cd4764b541a4acf5f527a1.shtml">便民电话</a>&nbsp; | &nbsp;-->
+			<!--<a href="http://www.chengdu.gov.cn/chengdu/public/exposure/zhaocuo.shtml">网友建议</a>&nbsp;| &nbsp;-->
+			<!-- <a href="http://www.chengdu.gov.cn/portals/information/comment.do">网站评论汇编</a>&nbsp; | &nbsp;
+			<a href="http://www.chengdu.gov.cn/portals/statistics/statistics.do">数据统计</a>&nbsp; | &nbsp; -->
+			<!-- <a href="http://mail.chengdu.gov.cn/icp/   gb/index.jsp">政府邮箱</a>&nbsp; | &nbsp; -->
+			<!-- <a href="https://www.rcmail.cn/">政务邮箱</a>&nbsp; | &nbsp;-->
+			<!-- <a href="http://www.chengdu.gov.cn/sitemap.shtml">网站地图</a> -->
+			<a href="https://www.chengdu.gov.cn/cdsrmzf/c169112/wzdt.shtml">网站地图</a>
+			<!--<a href="https://m.weibo.cn/u/3710857535?from=groupmessage&isappinstalled=0">成都服务</a>&nbsp; | &nbsp;-->
+			<!--<a href="https://rzsc.sczwfw.gov.cn/logon/password.jsp?state=nologin">一号登录</a>-->
+		</div>
+		<div class="footer1">
+			<div class="footer2" style="float: left;">
+	 		<!-- <p style="text-line:center">主办：成都市人民政府&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;承办：市政务服务管理和网络理政办公室</p> -->
+	 		<p>
+	 			<span>主办：成都市人民政府</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>承办：成都市城市运行和政务服务管理办公室</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span>网站维护电话：028-85227003(仅受理网站建设维护事宜)</span>
+			</p>
+			<p>
+	                <span>网站标识码5101000028</span>
+	                  
+	                  <span><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" style="color: #666666;">蜀ICP备05003365号</a>
+	                  </span> 
+
+	                  
+	                  <span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002000387" target="_blank" style="color: #666666;"><img src="Site/images/footer_icon.png" alt="">川公网安备 51019002000387 号</a>
+	                  </span>
+	                </p>
+	         
+	  		</div>
+	  		<div class="fr" style="float: right;">
+	         	<a href="http://bszs.conac.cn/sitename?method=show&amp;id=0BCEB007207851E2E053022819ACEE5A" target="_blank">
+	         		<img src="Site/images/footer_icon1.jpg" alt="">
+	         	</a>
+	         	<script id="_jiucuo_" sitecode='5101000028' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+	         	<a href="http://www.cdnet110.com/" target="_blank">
+	         		<img src="Site/images/footer_icon3.jpg" alt="">
+	         	</a>
+	         </div>
+       </div>
+	</div>
+</body>
+</html>
+<!--footer end -->
+</div>
+<script>
+function confirmForm() {
+	if(document.getElementById('visitDay').value > 5) {
+		msgAlert.init({grade: 30, height: "150px"});
+		return false;
+	}
+	else {
+		submitForm();	
+		return false;
+	}
+}
+function submitForm() {
+	var myreg = /^[0-9]*$/;
+	if ((document.mailForm.NO.value.replace(/(^\s*)|(\s*$)/g, "")) == "") {
+		  alert("提示\n\n请输入信件流水号。");
+		  mailForm.NO.focus();
+		  return false;
+		}
+	else if(!myreg.test(document.mailForm.NO.value)){
+		 alert("提示\n\n请正确输入信件流水号。");
+		 mailForm.NO.focus();
+		  return false;
+		}
+
+	
+	if ((document.mailForm.PWD.value.replace(/(^\s*)|(\s*$)/g, "")) == "") {
+		  alert("提示\n\n请输入信件提取码。");
+		  mailForm.PWD.focus();
+		  return false;
+		}
+	else if(!myreg.test(document.mailForm.PWD.value)){
+		 alert("提示\n\n请正确输入信件提取码。");
+		 mailForm.PWD.focus();
+		  return false;
+		}
+	
+	//满意度
+	/*var resualt=0;
+	
+	for(var i=0;i<document.mailForm.PingJia.length;i++)
+	{
+	    
+	  if(document.mailForm.PingJia[i].checked)
+	  {
+		  resualt = i;
+	  }
+	}*/
+	var resualt=0;
+	var resualt1=0;
+		
+		for(var i=0;i<document.mailForm.DeptPos.length;i++)
+		{
+		    
+		  if(document.mailForm.DeptPos[i].checked)
+		  {
+			  resualt = i;
+		  }
+		}
+		j
+		for(var j=0;j<document.mailForm.SolveC.length;j++)
+		{
+		    
+		  if(document.mailForm.SolveC[j].checked)
+		  {
+			  resualt1 = j;
+		  }
+		}
+	if(resualt == 2||resualt1 == 2)	{
+		document.mailForm.PingJia.value=1;
+	}else{
+		document.mailForm.PingJia.value=5;
+	}
+		
+	
+	if(resualt == 2||resualt1 == 2)
+	{
+		if ((document.mailForm.BMYSM.value.replace(/(^\s*)|(\s*$)/g, "")) == "") {
+			  alert("提示\n\n请输入信件不满意说明。");
+			  mailForm.BMYSM.focus();
+			  return false;
+			}
+		else{
+			if(document.mailForm.BMYSM.value.length>2000){
+				alert("提示\n\n信件不满意说明不超出2000字。");
+				  mailForm.BMYSM.focus();
+				  return false;
+			}
+		}
+	}
+	
+	if(document.mailForm.NO.value.charAt(0) == '1' || document.mailForm.NO.value.charAt(0) == '2' || document.mailForm.NO.value.charAt(0) == '3' && document.mailForm.NO.value.length==12 && document.mailForm.PWD.value.length == 6){
+		
+	}else{
+		alert("流水号或提取码错误");
+		return false;
+	}
+	document.getElementById('submitIpt').disabled = true;
+	if(document.mailForm.NO.value.charAt(0) == '1') document.mailForm.action = 'telComment';
+	else document.mailForm.action = 'mailComment';
+	document.mailForm.submit();
+}
+</script>
+</body>
+</HTML>
